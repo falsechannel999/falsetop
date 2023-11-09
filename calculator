@@ -1,0 +1,36 @@
+#include
+using namespace std;
+
+int main() {
+char Oper;
+double num1, num2;
+
+cout << "Введите оператор (+, -, *, /): " << endl;
+cin >> operatorSymbol;
+
+cout << "Введите два числа: " << endl;
+cin >> num1 >> num2;
+
+switch (operatorSymbol) {
+case '+':
+cout << num1 << " + " << num2 << " = " << num1 + num2;
+break;
+case '-':
+cout << num1 << " - " << num2 << " = " << num1 - num2;
+break;
+case '*':
+cout << num1 << " * " << num2 << " = " << num1 * num2;
+break;
+case '/':
+if (num2 != 0)
+cout << num1 << " / " << num2 << " = " << num1 / num2;
+else
+cout << "Ошибка: Деление на ноль запрещено!";
+break;
+default:
+cout << "Ошибка: Введен недопустимый оператор.";
+break;
+}
+
+return 0;
+}
