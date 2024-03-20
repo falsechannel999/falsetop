@@ -154,7 +154,7 @@ class Registration extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(title: Text('Регистрация'),
+      appBar: AppBar(title: Text('Авторизация'),
       ),
       body: Container(
         alignment: Alignment.center,
@@ -164,7 +164,6 @@ class Registration extends StatelessWidget {
                 flex: 1,
                 child: Container(
                   padding: EdgeInsets.only( left: 10, right: 10),
-
                   margin: EdgeInsets.only(bottom: 8),
                   alignment: FractionalOffset(0.5, 3),
                   child: TextField(style: TextStyle(fontSize: 20, color: Colors.black
@@ -201,7 +200,7 @@ class Registration extends StatelessWidget {
                 flex: 1,
                 child: Container(
                   padding: EdgeInsets.only(left: 10,right: 10),
-                  alignment: FractionalOffset(0.5, 0.01),
+                  alignment: FractionalOffset(0.5, 0.1),
                   margin: EdgeInsets.only(bottom: 8),
                   child: TextField(style: TextStyle(fontSize: 20, color: Colors.black
                   ),
@@ -216,20 +215,17 @@ class Registration extends StatelessWidget {
                 )
             ),
             Expanded(
-                flex: 1,
-              child: Container(
-                  width: 200,
-                  height: 1,
-                child: ElevatedButton(
-                  child: Text('Зарегистрироваться'),
-                  onPressed: (){
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HomePage())
-                    );
-                  },
+
+                child: Container(
+                    alignment: FractionalOffset(0.5, 0.01),
+                    child: ElevatedButton(
+                        child: ExampleButton(text: 'Зарегистрироваться'),
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage())
+                          );
+                        }
+                    )
                 )
-              )
             )
 
           ],
