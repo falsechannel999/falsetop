@@ -164,7 +164,7 @@ class Registration extends StatelessWidget {
                 flex: 1,
                 child: Container(
                   padding: EdgeInsets.only( left: 10, right: 10),
-                  alignment: FractionalOffset(0.5, 3),
+                  alignment: FractionalOffset(0.5, 0.2),
                   margin: EdgeInsets.only(bottom: 8),
                   child: TextField(style: TextStyle(fontSize: 20, color: Colors.black
                   ),
@@ -356,6 +356,8 @@ class ListProduct extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
